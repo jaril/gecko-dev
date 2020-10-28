@@ -1860,7 +1860,7 @@ async function reloadAndStopRecordingTab(gBrowser) {
   const { recordingId } = data;
 
   recordReplayLog(`FinishedRecording ${recordingId}`);
-  saveRecordingInDB(data);
+  await saveRecordingInDB(data);
 
   let viewHost = "https://replay.io";
 
